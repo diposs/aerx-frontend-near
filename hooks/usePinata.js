@@ -5,7 +5,7 @@ import { upload } from "../lib/crust";
 
 
 // Change this for using crust or not. If you use crust we will unpin the file from pinata
-const deployCrust = true;
+const deployCrust = false;
 
 
 // pass the file or state you want to upload. It will upload the file and retrun the response.
