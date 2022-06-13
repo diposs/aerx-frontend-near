@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Head from "next/head";
+import { Box, LightMode } from "@chakra-ui/react";
 
 export default function Layout({ children }) {
     return (
@@ -12,7 +13,7 @@ export default function Layout({ children }) {
                 />
             </Head>
             <Header />
-            <main>{children}</main>
+            <LightMode><main>{children}</main></LightMode>
         </div>
     );
 }
