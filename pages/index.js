@@ -3,11 +3,12 @@ import Layout from "../components/Layout";
 import styles from "../styles/Home.module.css";
 import Channel from "../components/Landing/channel";
 import Footer from "../components/Footer";
-import { Box } from "@chakra-ui/react";
+import { Box, LightMode } from "@chakra-ui/react";
 
 export default function Home() {
     return (
         <Layout>
+        <LightMode>
             <Box className="flex flex-col">
                 <HeroSection />
                 <Features />
@@ -15,6 +16,7 @@ export default function Home() {
                 <Channel />
                 <Footer />
             </Box>
+        </LightMode>
         </Layout>
     );
 }
