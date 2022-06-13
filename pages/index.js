@@ -7,8 +7,8 @@ import { Box, LightMode } from "@chakra-ui/react";
 
 export default function Home() {
     return (
-        <Layout>
         <LightMode>
+        <Layout>
             <Box className="flex flex-col">
                 <HeroSection />
                 <Features />
@@ -16,7 +16,7 @@ export default function Home() {
                 <Channel />
                 <Footer />
             </Box>
-        </LightMode>
         </Layout>
+        </LightMode>
     );
 }
