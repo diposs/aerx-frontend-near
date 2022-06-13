@@ -11,6 +11,7 @@ import useTranslation from "next-translate/useTranslation";
 function HeroSection() {
     const { t } = useTranslation("landing");
     return (
+        <LightMode>
         <Box as="section" pt={100}>
             <Box position="relative">
                 <ChakraImage
@@ -69,6 +70,7 @@ function HeroSection() {
                 </Button>
             </Box>
         </Box>
+                     </LightMode>
     );
 }
 
