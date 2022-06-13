@@ -4,6 +4,7 @@ import {
     Button,
     Image as ChakraImage,
     Text,
+    LightMode,
 } from "@chakra-ui/react";
 
 import useTranslation from "next-translate/useTranslation";
