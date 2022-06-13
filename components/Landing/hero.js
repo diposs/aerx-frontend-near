@@ -11,7 +11,7 @@ import useTranslation from "next-translate/useTranslation";
 
 function HeroSection() {
     const { t } = useTranslation("landing");
-    const { colorMode } = light;
+    const { colorMode } = "light";
     return (
         <Box as="section" pt={100}>
             <Box position="relative">
