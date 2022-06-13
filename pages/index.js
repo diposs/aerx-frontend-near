@@ -9,13 +9,25 @@ export default function Home() {
     return (
         <LightMode>
         <Layout>
+        <LightMode>
             <Box className="flex flex-col">
+        <LightMode>
                 <HeroSection />
+        </LightMode>
+        <LightMode>
                 <Features />
+        </LightMode>
+        <LightMode>
                 <Team />
+        </LightMode>
+        <LightMode>
                 <Channel />
+        </LightMode>
+        <LightMode>
                 <Footer />
+        </LightMode>
             </Box>
+        </LightMode>
         </Layout>
         </LightMode>
     );
