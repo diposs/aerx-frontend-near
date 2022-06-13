@@ -3,7 +3,7 @@ import {
     Box,
     Button,
     Image as ChakraImage,
-    useColorMode,
+    
     Text,
 } from "@chakra-ui/react";
 
@@ -11,7 +11,7 @@ import useTranslation from "next-translate/useTranslation";
 
 function HeroSection() {
     const { t } = useTranslation("landing");
-    const { colorMode } = useColorMode();
+    const { colorMode } = light;
     return (
         <Box as="section" pt={100}>
             <Box position="relative">
