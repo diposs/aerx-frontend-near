@@ -26,11 +26,8 @@ function HeroSection() {
                 {t("heroSection.title")}
 
                 <ChakraImage
-                    src={
-                        colorMode === "light"
-                            ? "/images/dark-logo.svg"
-                            : "/images/white-logo.svg"
-                    }
+                    src="/images/white-logo.svg"
+                    
                     alt={t("logoAlt")}
                     className="rounded-sm"
                     layout="responsive"
