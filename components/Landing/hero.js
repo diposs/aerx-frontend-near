@@ -3,7 +3,6 @@ import {
     Box,
     Button,
     Image as ChakraImage,
-    useColorMode,
     Text,
 } from "@chakra-ui/react";
 
@@ -11,14 +10,13 @@ import useTranslation from "next-translate/useTranslation";
 
 function HeroSection() {
     const { t } = useTranslation("landing");
-    const { colorMode } = useColorMode('light' , 'light');
     return (
         <Box as="section" pt={100}>
             <Box position="relative">
                 <ChakraImage
                     zIndex={-1}
                     src="/mesh.png"
-                    filter={colorMode === "light" ? "invert(1)" : "invert(0)"}
+                    
                     width="100%"
                     position="absolute"
                     top="-200px"
@@ -50,7 +48,6 @@ function HeroSection() {
                 <ChakraImage
                     zIndex={-1}
                     src="/orb.svg"
-                    filter={colorMode === "light" ? "invert(1)" : "invert(0)"}
                     width={700}
                     position="absolute"
                     top="-150px"
