@@ -27,6 +27,42 @@ const InteractionBar = ({ nft, onOpen, currentCharge}) => {
         setCommentBox(!commentBox)
     }
     
+    (function(){
+  var start,
+      end,
+      diff;
+  var clickTime = 1500;
+  var longClick = new CustomEvent('longclick');
+  
+  var div = document.getElementsByClassName('.charging-click');
+  document.body.addEventListener('longclick', function(event){
+    
+    
+      {onOpen}
+    
+  });
+  
+  div.onmousedown = function() {
+    start = Date.now();
+    
+    div.onmouseup = function() {
+      end = Date.now();
+      diff = (end - start) + 1;
+      if (diff > clickTime) {
+        document.body.dispatchEvent(longClick);
+      } else {
+        clickchargePost()
+      }
+      
+    }
+  }
+  
+  
+
+
+
+})();
+    
     async function clickchargePost() {
         if (nearState?.aexBalance == 0){
             return;
@@ -57,7 +93,7 @@ const InteractionBar = ({ nft, onOpen, currentCharge}) => {
     return (
         <>
             <Footer style={styles.footer} className="flex align-middle gap-2" >
-                <ChargeOutlineButton onClick={clickchargePost}/>{currentCharge}
+                <ChargeOutlineButton class="charging-click" />{currentCharge}
                 <CommentIconButton onClick={comment}/>0
                 <ShareIconButton opacity={0.7} ml={2}/>0
                 <MemberTag style={styles.tag}/>
