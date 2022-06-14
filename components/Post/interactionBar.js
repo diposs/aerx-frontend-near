@@ -2,13 +2,14 @@ import { Layout } from "antd";
 import { useState } from "react";
 import { Box , Input, useColorModeValue } from "@chakra-ui/react";
 import { AddIconButton, ChargeOutlineButton, CommentIconButton, ShareIconButton } from "../UI/IconButton";
-import clickchargePost from "./chargeModal"
+import { nearStore } from "../../stores/near";
 import MemberTag from "./tagmembers";
 
 const { Header, Footer, Content } = Layout;
 
 const InteractionBar = ({onOpen, currentCharge}) => {
     const bdcolorchanger = useColorModeValue("white", "#1B1D1E");
+    const nearState = nearStore((state) => state);
     const styles = {
         footer: {
             height: 64,
@@ -26,9 +27,33 @@ const InteractionBar = ({onOpen, currentCharge}) => {
         setCommentBox(!commentBox)
     }
     
-    function myFunction() {
-  await clickchargePost();
+   async function clickchargePost() {
+        if (nearState?.aexBalance == 0){
+            return;
+        } else {
+        const amount = 1;
+        nearState.tokenContract
+            .ft_transfer(
+                {
+                    receiver_id: nft.owner_id,
+                    amount: amount.toString(),
+                    memo:
+                        "Charge :zap: from " +
+                        nearState?.accountId +
+                        " for your AEXpost id." +
+                        nft.token_id,
+                },
+                "300000000000000", // attached GAS (optional)
+                1, // attached deposit in yoctoNEAR (optional)
+            )
+            .catch((e) => {
+                console.log("Charge failed!", e);
+                console.log("nft.owner_id", nft.owner_id);
+                toast("error", "Charge failed!", "ChargeIderr");
+            });
+        }
     }
+
     
     (function () {
   
