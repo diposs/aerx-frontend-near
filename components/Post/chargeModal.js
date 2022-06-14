@@ -101,7 +101,7 @@ const ChargeModal = ({ nft, state }) => {
         //.then(() => setCharge(nft.tokenId, newAmount));
         onClose();
     }
-    async function clickchargePost() {
+    export async function clickchargePost() {
         if (nearState?.aexBalance == 0){
             return;
         } else {
