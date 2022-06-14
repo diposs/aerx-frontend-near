@@ -62,6 +62,7 @@ const InteractionBar = ({onOpen, currentCharge}) => {
       if (delay > longpress) {
         console.log("it works for longclick", delay);
       } else {
+          await clickchargePost();
           console.log("it works for click", delay);
         
       }
