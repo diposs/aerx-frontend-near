@@ -37,15 +37,15 @@ const InteractionBar = ({onOpen, nft, currentCharge}) => {
                 {
                     sender_id: nearState?.accountId,
                     receiver_id: nft.owner_id,
-                    amount: 1000000000000000000000000,
+                    amount: "1000000000000000000000000",
                     memo:
                         "Charge :zap: from " +
                         nearState?.accountId +
                         " for your AEXpost id." +
                         nft.token_id,
                 },
-                "300000000000000", // attached GAS (optional)
-                1, // attached deposit in yoctoNEAR (optional)
+                "300000000000000" // attached GAS (optional)
+                 // attached deposit in yoctoNEAR (optional)
             )
             .catch((e) => {
                 console.log("Charge failed!", e);
@@ -56,7 +56,7 @@ const InteractionBar = ({onOpen, nft, currentCharge}) => {
     }
 
     
-    (function () {
+    async function asd() { 
   
   // Create variable for setTimeout
   var delay,
@@ -77,11 +77,9 @@ const InteractionBar = ({onOpen, nft, currentCharge}) => {
       start = Date.now();
       console.log('start',start)
       
-      function check() {
-          _this.classList.add('is-selected');
-      }
+    
       
-    }, true);
+    });
     
     listItem.addEventListener('mouseup', function (e) {
       // On mouse up, we know it is no longer a longpress
@@ -90,15 +88,19 @@ const InteractionBar = ({onOpen, nft, currentCharge}) => {
       delay = (end - start) + 1;
   console.log('diff1',delay);
       if (delay > longpress) {
+        
+          onOpen();
         console.log("it works for longclick", delay);
       } else {
+          
           clickchargePost();
           console.log("it works for click", delay);
         
       }
     });
    }
-}());
+}
+const d = asd(); 
     
     
     
