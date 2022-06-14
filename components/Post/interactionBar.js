@@ -37,7 +37,7 @@ const InteractionBar = ({onOpen, nft, currentCharge}) => {
                 {
                     sender_id: nearState?.accountId,
                     receiver_id: nft.owner_id,
-                    amount: amount.toString(),
+                    amount: 1000000000000000000000000,
                     memo:
                         "Charge :zap: from " +
                         nearState?.accountId +
