@@ -2,7 +2,7 @@ import { Layout } from "antd";
 import { useState } from "react";
 import { Box , Input, useColorModeValue } from "@chakra-ui/react";
 import { AddIconButton, ChargeOutlineButton, CommentIconButton, ShareIconButton } from "../UI/IconButton";
-import { clickchargePost } from "./chargeModal"
+import clickchargePost from "./chargeModal"
 import MemberTag from "./tagmembers";
 
 const { Header, Footer, Content } = Layout;
