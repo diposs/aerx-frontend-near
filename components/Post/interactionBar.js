@@ -28,14 +28,14 @@ const InteractionBar = ({ nft, onOpen, currentCharge}) => {
         setCommentBox(!commentBox)
     }
     
-    (function(){
+    /*(function(){
   var start,
       end,
       diff;
   var clickTime = 1500;
   var longClick = new CustomEvent('longclick');
   
-  var div = document.getElementsByClassName('.charging-click');
+  var div = document.getElementsByClassName('charging-click');
   document.body.addEventListener('longclick', function(event){
     
     
@@ -57,14 +57,51 @@ const InteractionBar = ({ nft, onOpen, currentCharge}) => {
         clickchargePost();
       }
       
-    }
-  }
+    }*/
+    
+    (function () {
   
+  // Create variable for setTimeout
+  var delay,
+      start,
+      end;
   
-
-
-
-})();
+  // Set number of milliseconds for longpress
+  var longpress = 1300;
+  
+  var listItems = document.getElementsByClassName('charging-click');
+  var listItem;
+  
+  for (var i = 0, j = listItems.length; i < j; i++) {
+    listItem = listItems[i];
+    
+    listItem.addEventListener('mousedown', function (e) {
+      var _this = this;
+      start = Date.now();
+      console.log('start',start)
+      
+      function check() {
+          _this.classList.add('is-selected');
+      }
+      
+    }, true);
+    
+    listItem.addEventListener('mouseup', function (e) {
+      // On mouse up, we know it is no longer a longpress
+      end = Date.now();
+      console.log('end',end)
+      delay = (end - start) + 1;
+  console.log('diff1',delay);
+      if (delay > longpress) {
+        console.log("it works for longclick", delay);
+      } else {
+          console.log("it works for click", delay);
+        
+      }
+    });
+   }
+}());
+    
     
     
     return (
