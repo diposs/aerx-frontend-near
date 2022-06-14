@@ -26,6 +26,10 @@ const InteractionBar = ({onOpen, currentCharge}) => {
         setCommentBox(!commentBox)
     }
     
+    function myFunction() {
+  await clickchargePost();
+    }
+    
     (function () {
   
   // Create variable for setTimeout
@@ -62,7 +66,7 @@ const InteractionBar = ({onOpen, currentCharge}) => {
       if (delay > longpress) {
         console.log("it works for longclick", delay);
       } else {
-          clickchargePost();
+          myFunction();
           console.log("it works for click", delay);
         
       }
