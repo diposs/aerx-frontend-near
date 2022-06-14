@@ -31,10 +31,11 @@ const InteractionBar = ({onOpen, nft, currentCharge}) => {
         if (nearState?.aexBalance == 0){
             return;
         } else {
-        const amount = 1;
+        const amount = 1000000000000000000000000;
         nearState.tokenContract
-            .ft_transfer(
+            .send_aex(
                 {
+                    sender_id: nearState?.accountId,
                     receiver_id: nft.owner_id,
                     amount: amount.toString(),
                     memo:
