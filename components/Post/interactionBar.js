@@ -40,6 +40,7 @@ const InteractionBar = ({ nft, onOpen, currentCharge}) => {
     
     
       {onOpen}
+      console.log("it works for long-click", diff);
     
   });
   
@@ -52,7 +53,8 @@ const InteractionBar = ({ nft, onOpen, currentCharge}) => {
       if (diff > clickTime) {
         document.body.dispatchEvent(longClick);
       } else {
-        clickchargePost()
+          console.log("it works for click", diff);
+        clickchargePost();
       }
       
     }
