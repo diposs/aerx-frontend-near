@@ -68,6 +68,8 @@ const InteractionBar = ({onOpen, nft, currentCharge}) => {
   
   var listItems = document.getElementsByClassName('charging-click');
   var listItem;
+        var checker=listItems.length;
+        console.log('checker',checker)
   
   for (var i = 0, j = listItems.length; i < j; i++) {
     listItem = listItems[i];
