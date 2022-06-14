@@ -7,7 +7,7 @@ import MemberTag from "./tagmembers";
 
 const { Header, Footer, Content } = Layout;
 
-const InteractionBar = ({onOpen, currentCharge}) => {
+const InteractionBar = ({onOpen, nft, currentCharge}) => {
     const bdcolorchanger = useColorModeValue("white", "#1B1D1E");
     const nearState = nearStore((state) => state);
     const styles = {
