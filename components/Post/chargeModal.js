@@ -101,6 +101,33 @@ const ChargeModal = ({ nft, state }) => {
         //.then(() => setCharge(nft.tokenId, newAmount));
         onClose();
     }
+    async function clickchargePost() {
+        if (nearState?.aexBalance == 0){
+            return;
+        } else {
+        const amount = 1;
+        nearState.tokenContract
+            .ft_transfer(
+                {
+                    receiver_id: nft.owner_id,
+                    amount: amount.toString(),
+                    memo:
+                        "Charge :zap: from " +
+                        nearState?.accountId +
+                        " for your AEXpost id." +
+                        nft.token_id,
+                },
+                "300000000000000", // attached GAS (optional)
+                1, // attached deposit in yoctoNEAR (optional)
+            )
+            .catch((e) => {
+                console.log("Charge failed!", e);
+                console.log("nft.owner_id", nft.owner_id);
+                toast("error", "Charge failed!", "ChargeIderr");
+            });
+        }
+    }
+
 
     return (
         <Modal
