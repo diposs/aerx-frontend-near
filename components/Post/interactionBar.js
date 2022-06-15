@@ -56,7 +56,7 @@ const InteractionBar = ({onOpen, nft, currentCharge}) => {
     }
 
     
-    async function asd() { 
+  function asd() { 
   
   // Create variable for setTimeout
   var delay,
