@@ -68,16 +68,13 @@ const InteractionBar = ({onOpen, nft, currentCharge}) => {
   
   const listItems = document.getElementsByClassName('charging-click');
   var listItem;
-        var checker=listItems.length;
-        console.log('checker',checker);
-        console.log('listitems',listItems);
   
   for (var i = 0, j = listItems.length; i < j; i++) {
     listItem = listItems[i];
     
     listItem.addEventListener('mousedown', function (movedownsdd) {
       start = Date.now();
-      console.log('start',start)
+      console.log('start',start);
       
     
       
@@ -86,7 +83,7 @@ const InteractionBar = ({onOpen, nft, currentCharge}) => {
     listItem.addEventListener('mouseup', function (moveupddaa) {
       // On mouse up, we know it is no longer a longpress
       end = Date.now();
-      console.log('end',end)
+      console.log('end',end);
       delay = (end - start) + 1;
   console.log('diff1',delay);
       if (delay > longpress) {
