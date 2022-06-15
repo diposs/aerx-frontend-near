@@ -7,11 +7,9 @@ import { Box, LightMode, ColorModeScript, colorMode } from "@chakra-ui/react";
 
 export default function Home() {
     return (
-        <ColorModeScript initialColorMode={colorMode === 'light' ? 'Light' : 'Light'} />
         <LightMode>
         <Layout>
-
-            <Box className="flex flex-col chakra-ui-light">
+            <Box className="flex flex-col">
                 <HeroSection />
                 <Features />
                 <Team />
