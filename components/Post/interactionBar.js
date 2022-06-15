@@ -68,10 +68,9 @@ const InteractionBar = ({onOpen, nft, currentCharge}) => {
   
   const listItems = document.getElementsByClassName('charging-click');
   var listItem;
-  
-  for (var i = 0, j = listItems.length; i < j; i++) {
+   console.log("0",listItems[3]);
     listItem = listItems[3];
-    
+ 
     listItem.addEventListener('mousedown', function (movedownsdd) {
       start = Date.now();
       console.log('start',start);
@@ -97,7 +96,7 @@ const InteractionBar = ({onOpen, nft, currentCharge}) => {
         
       }
     }, true);
-   };
+   
 }
 const ddsda = asd(); 
     
