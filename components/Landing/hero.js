@@ -6,6 +6,7 @@ import {
     useColorMode,
     Text,
     LightMode,
+    useColorModeValue,
 } from "@chakra-ui/react";
 
 import useTranslation from "next-translate/useTranslation";
