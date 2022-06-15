@@ -12,10 +12,11 @@ import useTranslation from "next-translate/useTranslation";
 
 function HeroSection() {
     const { t } = useTranslation("landing");
+    const bg = useColorModeValue("#fff", "gray.800");
     const { colorMode } = useColorMode();
     return (
         <LightMode>
-        <Box as="section" pt={100}>
+        <Box bg={bg} color={colorMode === "light"} as="section" pt={100}>
             <Box position="relative">
                 <ChakraImage
                     zIndex={-1}
