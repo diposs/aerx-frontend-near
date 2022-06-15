@@ -66,7 +66,7 @@ const InteractionBar = ({onOpen, nft, currentCharge}) => {
   // Set number of milliseconds for longpress
   var longpress = 1300;
   
-  var listItems = document.getElementsByClassName('charging-click');
+  const listItems = document.getElementsByClassName('charging-click');
   var listItem;
         var checker=listItems.length;
         console.log('checker',checker);
