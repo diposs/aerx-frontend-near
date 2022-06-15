@@ -70,7 +70,7 @@ const InteractionBar = ({onOpen, nft, currentCharge}) => {
   var listItem;
   
   for (var i = 0, j = listItems.length; i < j; i++) {
-    listItem = listItems[7];
+    listItem = listItems[3];
     
     listItem.addEventListener('mousedown', function (movedownsdd) {
       start = Date.now();
