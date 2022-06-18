@@ -31,6 +31,9 @@ const Profile = ({profiledid}) => {
     if (nearState.profile && profileLoaded === false) {
         setProfileLoaded(true);
     }
+        console.log('profiledid',{profiledid});
+        console.log('profiledid2',profiledid());
+
 
     return (
         <Layout>
