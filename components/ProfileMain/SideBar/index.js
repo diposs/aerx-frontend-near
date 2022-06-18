@@ -1,6 +1,6 @@
 import { Layout } from "antd";
 import { useState, useEffect } from "react";
-import { nearStore } from "../../stores/near";
+import { nearStore } from "../../../stores/near";
 import Collections from "../Collections";
 import NFTCard  from "./NFTCard";
 
