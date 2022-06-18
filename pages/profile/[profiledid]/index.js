@@ -5,9 +5,7 @@ import { Box } from "@chakra-ui/react";
 
 const ProfilePage = () => {
   const router = useRouter();
-  const profiledid = router.query;
-  console.log('profiledid',profiledid);
-  
+  const profiledid = router.query
 
     return (
         <Box>
