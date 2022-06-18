@@ -25,7 +25,7 @@ export default function SideBar({ children, bg, state }) {
         }
         get_current_profileview();
     }, [nearState, nearState.accountId, {profiledid}.profiledid, isOpen]);*/
-        console.log('profiledid2',{profiledid}.profiledid?.profiledid);
+        console.log('profiledid2',{profiledid});
 
 
     return (
