@@ -59,3 +59,5 @@ const Profile = ({profiledid}) => {
     );
 };
 
+
+export default Profile;
