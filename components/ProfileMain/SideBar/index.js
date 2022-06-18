@@ -2,16 +2,17 @@ import { Layout } from "antd";
 import { useState, useEffect } from "react";
 import { nearStore } from "../../../stores/near";
 import Collections from "../Collections";
-import { roadmap } from "../profile";
 import NFTCard  from "./NFTCard";
+import { useRouter } from 'next/router'
 
 const { Header, Sider, Content, Footer } = Layout;
 
 export default function SideBar({  children, bg, state }) {
-
-    const [isCollapsed, setIsCollapsed] = useState(false);
-	 const look = roadmap();
-    console.log("state",state);
+	const router = useRouter();
+  	const profiledlooker = router.query
+	const [isCollapsed, setIsCollapsed] = useState(false);
+	console.log("state",state);
+	console.log("viewed",profiledlooker);
 /*	const [currentProfileview, setCurrentProfileview] = useState();
     useEffect(() => {
         async function get_current_profileview() {
@@ -27,7 +28,6 @@ export default function SideBar({  children, bg, state }) {
         }
         get_current_profileview();
     }, [nearState, nearState.accountId, {profiledid}.profiledid, isOpen]);*/
-        console.log('profiledid2', roadmap());
 
 
     return (
