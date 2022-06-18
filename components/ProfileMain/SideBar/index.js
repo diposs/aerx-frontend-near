@@ -2,13 +2,15 @@ import { Layout } from "antd";
 import { useState, useEffect } from "react";
 import { nearStore } from "../../../stores/near";
 import Collections from "../Collections";
+import { Profile } from "../profile";
 import NFTCard  from "./NFTCard";
 
 const { Header, Sider, Content, Footer } = Layout;
 
-export default function SideBar({ profiledid, children, bg, state }) {
+export default function SideBar({  children, bg, state }) {
 
-    const [isCollapsed, setIsCollapsed] = useState(false);    
+    const [isCollapsed, setIsCollapsed] = useState(false);
+	 const look = Profile();
     console.log("state",state);
 /*	const [currentProfileview, setCurrentProfileview] = useState();
     useEffect(() => {
@@ -25,7 +27,7 @@ export default function SideBar({ profiledid, children, bg, state }) {
         }
         get_current_profileview();
     }, [nearState, nearState.accountId, {profiledid}.profiledid, isOpen]);*/
-        console.log('profiledid2',{profiledid});
+        console.log('profiledid2', look);
 
 
     return (
