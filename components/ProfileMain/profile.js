@@ -31,9 +31,7 @@ const Profile = ({profiledid}) => {
     if (nearState.profile && profileLoaded === false) {
         setProfileLoaded(true);
     }
-    export async function roadmap(){
-        const rDMP = await {profiledid}.profiledid?.profiledid;
-    }
+    
         console.log('profiledid',{profiledid}.profiledid?.profiledid);
        // console.log('profiledid2',profiledid());
 
@@ -61,4 +59,7 @@ const Profile = ({profiledid}) => {
     );
 };
 
+export async function roadmap(){
+        const rDMP = await {profiledid}.profiledid?.profiledid;
+    }
 export default Profile;
