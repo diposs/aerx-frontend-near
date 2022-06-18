@@ -32,7 +32,7 @@ const Profile = ({profiledid}) => {
         setProfileLoaded(true);
     }
     export async function roadmap(){
-        const rDMP = {profiledid}.profiledid?.profiledid;
+        const rDMP = await {profiledid}.profiledid?.profiledid;
     }
         console.log('profiledid',{profiledid}.profiledid?.profiledid);
        // console.log('profiledid2',profiledid());
