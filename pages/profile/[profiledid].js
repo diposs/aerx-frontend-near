@@ -14,10 +14,12 @@ export async function getServerSideProps({ params }) {
 
 const ProfilePage = () => {
     const nearState = nearStore((state) => state);
+  async function createPost() {
     const profiledidViewer = await nearState.pnftContract.profile_by_id({
                 user_id: nearState.accountId,
                 user_to_find_id: profiledid,
             });
+  }
   console.log('profiledidViewer',profiledidViewer);
     return (
         <Box>
