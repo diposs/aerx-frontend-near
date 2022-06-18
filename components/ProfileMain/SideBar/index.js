@@ -6,7 +6,7 @@ import NFTCard  from "./NFTCard";
 
 const { Header, Sider, Content, Footer } = Layout;
 
-export default function SideBar({ children, bg, state }) {
+export default function SideBar({ profiledid, children, bg, state }) {
 
     const [isCollapsed, setIsCollapsed] = useState(false);    
     console.log("state",state);
