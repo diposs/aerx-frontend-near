@@ -7,10 +7,10 @@ export async function getServerSideProps({ params }) {
   const profiledid = params.profiledid;
   return {
     props: {
-      'profiledid',
+      profiledid,
     }
   }
-}
+};
 
 const ProfilePage = () => {
     const nearState = nearStore((state) => state);
