@@ -5,19 +5,20 @@ import { Box } from "@chakra-ui/react";
 
 export async function getServerSideProps({ params }) {
   const profiledid = params.profiledid;
-  const nearState = nearStore((state) => state);
-  const profiledidViewer = await nearState.pnftContract.profile_by_id({
-                user_id: nearState.accountId,
-                user_to_find_id: profiledid,
-            }).then(res => res.json());
   return {
     props: {
-      profiledid,
+      'profiledid'
     }
   }
 }
 
 const ProfilePage = () => {
+    const nearState = nearStore((state) => state);
+    const profiledidViewer = await nearState.pnftContract.profile_by_id({
+                user_id: nearState.accountId,
+                user_to_find_id: profiledid,
+            });
+  console.log('profiledidViewer',profiledidViewer);
     return (
         <Box>
             <Profile profiledid = {profiledid}  />
