@@ -2,7 +2,7 @@ import { Layout } from "antd";
 import { useState, useEffect } from "react";
 import { nearStore } from "../../../stores/near";
 import Collections from "../Collections";
-import { Profile } from "../profile";
+import { roadmap } from "../profile";
 import NFTCard  from "./NFTCard";
 
 const { Header, Sider, Content, Footer } = Layout;
@@ -10,7 +10,7 @@ const { Header, Sider, Content, Footer } = Layout;
 export default function SideBar({  children, bg, state }) {
 
     const [isCollapsed, setIsCollapsed] = useState(false);
-	 const look = Profile();
+	 const look = roadmap();
     console.log("state",state);
 /*	const [currentProfileview, setCurrentProfileview] = useState();
     useEffect(() => {
