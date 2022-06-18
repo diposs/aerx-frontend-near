@@ -13,12 +13,13 @@ export default function SideBar({  children, bg, state }) {
 	const [isCollapsed, setIsCollapsed] = useState(false);
 	console.log("state",state);
 	console.log("viewed",profiledlooker.profiledid);
+	const nearState = nearStore((state) => state);
 	const [currentProfileview, setCurrentProfileview] = useState();
 	useEffect(() => {
 		async function get_current_profileview() {
 			var res = await nearState.pnftContract.profile_by_id({
                 	user_id: nearState.accountId,
-                	user_to_find_id:profiledlooker.profiledid,
+                	user_to_find_id: profiledlooker.profiledid,
             	});
 
            	 setCurrentProfileview(res);
