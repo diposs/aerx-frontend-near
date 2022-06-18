@@ -59,7 +59,3 @@ const Profile = ({profiledid}) => {
     );
 };
 
-export async function roadmap(){
-        const rDMP = {profiledid};
-    }
-export default Profile;
