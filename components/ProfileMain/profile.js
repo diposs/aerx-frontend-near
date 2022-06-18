@@ -32,7 +32,7 @@ const Profile = ({profiledid}) => {
         setProfileLoaded(true);
     }
         console.log('profiledid',{profiledid});
-        console.log('profiledid2',profiledid());
+       // console.log('profiledid2',profiledid());
 
 
     return (
