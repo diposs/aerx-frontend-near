@@ -7,7 +7,7 @@ export async function getServerSideProps({ params }) {
   const profiledid = params.profiledid;
   return {
     props: {
-      'profiledid'
+      'profiledid',
     }
   }
 }
