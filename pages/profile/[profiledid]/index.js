@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import Profile from "../../components/ProfileMain";
+import Profile from "../../../components/ProfileMain";
 import { Box } from "@chakra-ui/react";
 
 
