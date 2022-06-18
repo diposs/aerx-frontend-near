@@ -12,7 +12,7 @@ export default function SideBar({  children, bg, state }) {
   	const profiledlooker = router.query
 	const [isCollapsed, setIsCollapsed] = useState(false);
 	console.log("state",state);
-	console.log("viewed",profiledlooker);
+	console.log("viewed",profiledlooker.profiledid?.profiledid);
 /*	const [currentProfileview, setCurrentProfileview] = useState();
     useEffect(() => {
         async function get_current_profileview() {
