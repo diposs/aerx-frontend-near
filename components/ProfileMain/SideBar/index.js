@@ -1,5 +1,6 @@
 import { Layout } from "antd";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { nearStore } from "../../stores/near";
 import Collections from "../Collections";
 import NFTCard  from "./NFTCard";
 
@@ -9,6 +10,23 @@ export default function SideBar({ children, bg, state }) {
 
     const [isCollapsed, setIsCollapsed] = useState(false);    
     console.log("state",state);
+/*	const [currentProfileview, setCurrentProfileview] = useState();
+    useEffect(() => {
+        async function get_current_profileview() {
+          
+            var res = await nearState.pnftContract.profile_by_id({
+                user_id: nearState.accountId,
+                user_to_find_id:{profiledid}.profiledid?.profiledid,
+            });
+
+            setCurrentProfileview(res);
+            // return res;
+            
+        }
+        get_current_profileview();
+    }, [nearState, nearState.accountId, {profiledid}.profiledid, isOpen]);*/
+        console.log('profiledid2',{profiledid}.profiledid?.profiledid);
+
 
     return (
 	<div>
