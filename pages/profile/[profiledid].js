@@ -23,7 +23,7 @@ export async function getServerSideProps({ params }) {
         }
         get_current_profile();
     }, [nearState, nearState.pnftContract, nearState.accountId, profiledid, ]);
-  const profiledidViewer = await.get_current_profile().then(res => res.json());
+  const profiledidViewer = await get_current_profile().then(res => res.json());
   return {
     props: {
       profiledid,
