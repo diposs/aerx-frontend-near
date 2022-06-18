@@ -127,12 +127,14 @@ const InteractionBar = ({ nft, onOpen, currentCharge, currentComment }) => {
         <>
             <Footer style={styles.footer} className="flex align-middle gap-2">
         {nft.owner_id === nearState.accountId || nft.owner_id ===  "Aerx.testnet" || Number.isInteger(nft.post_id) == false ? (
-                null ) : <>
-        ( <ChargeOutlineButton {...longPressEvent} />
+                null ) : 
+        (<>
+         <ChargeOutlineButton {...longPressEvent} />
                 {currentCharge}
                 <CommentIconButton onClick={comment} />{currentComment}
                 <ShareIconButton opacity={0.7} ml={2} />0
                 <MemberTag style={styles.tag} />
+                    </>)}
             </Footer>
             <Footer>
                 {commentBox ? (
@@ -153,7 +155,6 @@ const InteractionBar = ({ nft, onOpen, currentCharge, currentComment }) => {
                         </Box>
                     </Box>
                 ) : null}
-                </>)}
             </Footer>
         </>
     );
