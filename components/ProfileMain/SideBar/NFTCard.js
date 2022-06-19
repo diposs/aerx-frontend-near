@@ -47,7 +47,7 @@ const NFTCard = ({ profile, balance, ...rest }) => {
                             fontWeight="bold"
                             fontSize="2xl"
                         >
-                            {'infoCollect?.username' || "Pavel Dantsev"}
+                            Pavel Dantsev
                         </Text>
                         <Text sx={styles} fontWeight="medium">
                             @{profile?.token_id || "pashq.aerx"}
@@ -68,7 +68,7 @@ const NFTCard = ({ profile, balance, ...rest }) => {
                 <Box className="text-left px-4 mb-5" sx={styles}>
                     <Text className="opacity-50 mb-3 font-semibold" fontSize="1.8vh">ABOUT</Text>
                     <Text overflowWrap="anywhere">
-                        'infoCollectaboutMe'
+                        infoCollectaboutMe
                     </Text>
                 </Box>
                 <BalanceBar balance={balance} />
