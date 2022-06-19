@@ -37,7 +37,7 @@ export default function SideBar({  children, bg, state }) {
                 		trigger={null}
             		>    
             		<NFTCard
-                    		profile={state?.profile}
+                    		profile={currentProfileview}
                     		balance={state?.aexBalance}
                    		 bg={bg}
                     		className="sticky top-20 min-h-max min-w-full"
