@@ -15,7 +15,7 @@ const NFTCard = ({ profile, balance, ...rest }) => {
     const value = profile?.owner_id || "0jx12hbuwc34jc" ;
     const { hasCopied, onCopy } = useClipboard(value);
     console.log("balance",balance);
-    const infoCollect = profile?.metadata.extra.username;
+    const infoCollect = JSON.parse(profile?.metadata.extra);
     console.log("info",infoCollect);
     const picBg = useColorModeValue("white", "gray.300");
     const bgGradient = useColorModeValue(
