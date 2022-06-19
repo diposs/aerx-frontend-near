@@ -15,7 +15,8 @@ const NFTCard = ({ profile, balance, ...rest }) => {
     const value = profile?.owner_id || "0jx12hbuwc34jc" ;
     const { hasCopied, onCopy } = useClipboard(value);
     console.log("balance",balance);
-    const infoCollect = profile?.metadata.extra;
+    const infoCollect = profile.metadata?.extra;
+    console.log("info",infoCollect);
     const picBg = useColorModeValue("white", "gray.300");
     const bgGradient = useColorModeValue(
         "linear(#edf2f700, #edf2f720 15%, gray.100 90%)",
@@ -46,7 +47,7 @@ const NFTCard = ({ profile, balance, ...rest }) => {
                             fontWeight="bold"
                             fontSize="2xl"
                         >
-                            {infoCollect?.username || "Pavel Dantsev"}
+                            {infoCollect.username || "Pavel Dantsev"}
                         </Text>
                         <Text sx={styles} fontWeight="medium">
                             @{profile?.token_id || "pashq.aerx"}
@@ -67,7 +68,7 @@ const NFTCard = ({ profile, balance, ...rest }) => {
                 <Box className="text-left px-4 mb-5" sx={styles}>
                     <Text className="opacity-50 mb-3 font-semibold" fontSize="1.8vh">ABOUT</Text>
                     <Text overflowWrap="anywhere">
-                        {infoCollect?.aboutMe}
+                        {infoCollect.aboutMe}
                     </Text>
                 </Box>
                 <BalanceBar balance={balance} />
