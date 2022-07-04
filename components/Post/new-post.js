@@ -18,7 +18,6 @@ import { nearStore } from "../../stores/near";
 import { getBalance, fetchpostsData } from "../../lib/tokenContract";
 import useTranslation from "next-translate/useTranslation";
 import useFetchPosts from "../../hooks/useFetchPosts";
-import { supabase, postToSupa } from "../../lib/supabaseClient";
 
 function NewPost({ bg }) {
     const nearState = nearStore((state) => state);
