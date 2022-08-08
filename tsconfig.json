@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "incremental": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/components/*": ["components/*"],
+            "@/hooks/*": ["hooks/*"],
+            "@/lib/*": ["lib/*"],
+            "@/public/*": ["public/*"],
+            "@/stores/*": ["stores/*"],
+            "@/types/*": ["types/*"],
+            "@/utils/*": ["utils/*"]
+        }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Flow/index.jsx", "components/Flow/mockupResponse.js", "components/Header/index.js", "components/Header2/index.js"],
+    "exclude": ["node_modules"]
+}
